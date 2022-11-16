@@ -1,0 +1,16 @@
+- name: Playbook para criação de Usuários
+  hosts: all
+  vars:
+    - server_name: 
+      user_name: CeciliaFernandes
+      conf_file: /opt/app/app.conf
+  tasks:
+    - name: Criando Usuário
+      become: true
+      user:
+        name: "{{ user_name }}"
+        comment: Uuário criado através do Ansible
+        group: root
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa

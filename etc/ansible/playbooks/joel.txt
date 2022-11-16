@@ -1,0 +1,7 @@
+# Arquivo atualizado pelo Ansible
+# Joel Fernandes
+# Consultor em TI
+# Estudo de Ansible
+# Teste realizado com sucesso
+# Fim do Arquivo
+

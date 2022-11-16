@@ -1,0 +1,79 @@
+#[all:vars]
+#ansible_python_interpreter=/usr/bin/python3
+
+[PfSenses]
+#pfsense01	ansible_host=pfsense1.connect.local
+#ansible_python_interpreter: /usr/local/bin/python3.8
+#ansible_shell_executable: /bin/sh
+
+#[centos]
+#ansible-target-01.connect.local
+#ansible-target-02.connect.local
+#ansible-target-03.connect.local
+#ansible-target-04.connect.local
+
+#[localhost]
+#AnsibleServer	ansible-server-01.connect.local
+
+[Zabbix]
+#Server		ansible_host=zbx-srv.connect.local
+#Server-01	ansible_host=zbx-srv-01.connect.local
+#Server-02	ansible_host=zbx-srv-02.connect.local
+#Grafana		ansible_host=grf-srv.connect.local
+Data		ansible_host=zbx-mdb.connect.local
+#Front		ansible_host=zbx-frt.connect.local
+#Proxy		ansible_host=zbx-prx.connect.local
+
+[Zabbix:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[PostgreSQL]
+#DataPostSQL	ansible_host=srv-psg.connect.local
+
+[PostgreSQL:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+#[centos]
+#Docker	ansible_host=docker-server.connect.local
+
+[Opmon]
+#Opmon		ansible_host=opm-srv.connect.local
+#JavaServer	ansible_host=jmx-srv.connect.local
+
+[Opmon:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[Windows]
+#192.168.1.12
+WindowServer ansible_host=ads-srv.connect.local
+#ads-srv.connect.local
+
+[Windows:vars]
+#ansible_user=Administrator
+#ansible_password=123@Mudar
+#ansible_winrm_transport: ntlm
+#ansible_port: 5986
+#ansible_connection=winrm
+#ansible_winrm_scheme= https
+
+#ansible_winrm_transport=basic
+#ansible_winrm_scheme=http
+#ansible_winrm_server_cert_validation=ignore
+
+
+############################################
+ansible_user=Administrator
+ansible_password=123@Mudar
+ansible_connection=winrm
+ansible_winrm_transport=ntlm
+#ansible_winrm_transport=basic
+#ansible_winrm_scheme=http
+ansible_winrm_scheme=https
+ansible_winrm_server_cert_validation=ignore
+ansible_port=5986
+#ansible_port=5985
+
+
+
+
+

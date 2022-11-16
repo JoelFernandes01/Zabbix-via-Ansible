@@ -1,0 +1,32 @@
+---
+# defaults file for mysql-redhat8
+
+## Variáveis MySQL
+mysql_root_user: "root"
+mysql_root_pass: "123@Mudar"
+mysql_host: "zbx-mdb.connect.local"
+
+mysql_packages:
+  - mysql-server
+  - python3-PyMySQL
+  - mysql-devel
+
+## Variáveis Zabbix
+zabbix_release: "6.0"
+zabbix_version: "6.0-1"
+zabbix_packages:
+  - zabbix-server-mysql
+  - zabbix-sql-scripts
+  - zabbix-agent2
+
+mysql_zbx_mdb: "zbxsrvmdb"
+mysql_zbx_pass: "123@Mudar"
+mysql_zbx_user: "zbxusr"
+
+zbx_srv_addr: "zbx-srv.connect.local"
+zbx_srv_port: "10051"
+zbx_frt_addr: "zbx-frt.connect.local"
+
+...
+
+

@@ -1,0 +1,59 @@
+---
+# tasks file for role-postgresql
+
+- name: Install the PostgreSQL RPM repository
+#  yum:
+  ansible.builtin.yum:
+    name:
+      - postgresql
+      - postgresql-server
+      - python3-psycopg2
+    state: present
+#    autoremove: yes
+
+- name: Check if PostgreSQL is initialized
+  ansible.builtin.stat:
+    path: "/var/lib/pgsql/data/pg_hba.conf"
+  register: postgres_data
+
+- name: Initialize PostgreSQL
+  ansible.builtin.shell: "postgresql-setup initdb"
+  when: not postgres_data.stat.exists
+
+- name: Start and enable service
+  ansible.builtin.service:
+    name: postgresql
+    state: started
+    enabled: true
+
+- name: Utility present
+  ansible.builtin.package:
+    name: python3-psycopg2
+    state: present
+
+- name: Create Data Base
+  community.postgresql.postgresql_db:
+    state: present
+    name: "{{ db_name }}"
+  become: true
+  become_user: postgres
+
+#- name: Utility present
+#  ansible.builtin.package:
+#    name: python3-psycopg2
+#    state: present
+
+- name: Create db user
+  community.postgresql.postgresql_user:
+    state: present
+    name: "{{ db_user }}"
+    password: "{{ db_password }}"
+  become: true
+  become_user: postgres
+
+
+
+- name: Autoremove unneeded packages installed as dependencies
+  dnf:
+    autoremove: yes 
+  

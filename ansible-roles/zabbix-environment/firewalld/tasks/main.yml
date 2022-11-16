@@ -1,0 +1,29 @@
+---
+# tasks file for firewalld
+# Configurando o Firewalld
+- name: Iniciando e habilitando o Firewalld
+  service:
+    name: firewalld
+    state: started
+    enabled: true
+
+#- name: firewalld configuration
+#  firewalld:
+#    zone: public
+#    service: "{{ item }}"
+#    permanent: yes
+#    state: enabled
+#  loop:
+#    - http
+#    - https
+##    - mysql
+#    - zabbix-agent
+##    - zabbix-server
+
+- name: Restart o serviço Firewalld
+  service:
+    name: firewalld
+    state: restarted
+
+...
+

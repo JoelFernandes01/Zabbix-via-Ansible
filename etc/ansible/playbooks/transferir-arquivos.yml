@@ -1,0 +1,10 @@
+# Playbook para transferir arquivos
+#
+- name: Playbook de Transferir Arquivos
+  hosts: all
+  tasks:
+  - name: Atualizar o arquivo joel.txt
+    become: true
+    copy:
+      src: joel.txt
+      dest: /

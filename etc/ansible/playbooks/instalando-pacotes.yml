@@ -1,0 +1,48 @@
+- name: Instalando pacotes !
+  hosts: all
+  tasks:
+    - name: Instando Pacotes in Debian
+      become: true
+      apt:
+        name: "{{ item }}"
+      loop:
+        - sl
+        - ncdu
+        - wget
+        - git
+        - vim
+        - jq
+        - net-tools
+        - tree
+      when: ansible_distribution == "Debian"
+
+    - name: Instando Pacotes in Ubuntu
+      become: true
+      apt:
+        name: "{{ item }}"
+      loop:
+        - sl
+        - ncdu
+        - wget
+        - git
+        - vim
+        - jq
+        - net-tools
+        - tree
+      when: ansible_distribution == "Ubuntu"
+
+#  tasks:
+#    - name: Instalando Pacotes in Centos
+#      become: true
+#      dnf:
+#        name: "{{ item }}"
+#      loop:
+#        - sl
+#        - ncdu
+#        - wget
+#        - git
+#        - vim
+#        - jq
+#        - net-tools
+#        - tree
+#      when: ansible_distribution == "Centos"

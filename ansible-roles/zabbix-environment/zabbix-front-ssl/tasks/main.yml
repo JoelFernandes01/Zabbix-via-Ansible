@@ -1,0 +1,58 @@
+---
+# tasks file for zabbix-front-ssl
+- name: Install mod_ssl
+  dnf:
+    name: mod_ssl
+    state: latest
+
+- name: Criando a pasta private /etc/httpd/ssl/private !
+  file: 
+    path: /etc/httpd/ssl/private 
+    state: directory 
+    mode: 0700
+
+#- name: Create directory /var/www/html
+#  file: path={{item}} state=directory mode=0755 owner=nginx group=nginx
+#  with_items:
+#    - /var/www
+#    - /var/www/html
+#  notify: Restart nginx
+#  when: ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS'
+
+- name: Copy the Templates
+  copy:
+    src: zabbix-front-ssl/files/php.ini
+    dest: /etc/php.ini
+
+- name: Copy the Templates
+  copy:
+   src: zabbix-front-ssl/files/httpd.conf
+   dest: /etc/httpd/conf/httpd.conf
+
+- name: Copy the Templates SSL
+  copy:
+    src: zabbix-front-ssl/files/ssl.conf
+    dest: /etc/httpd/conf.d/ssl.conf
+
+- name: Copy the Templates Zabbix KEY
+  copy:
+    src: zabbix-front-ssl/files/zabbix.key
+    dest: /etc/httpd/ssl/private/zabbix.key
+
+- name: Copy the Templates Zabbix CRT
+  copy:
+    src: zabbix-front-ssl/files/zabbix.crt
+    dest: /etc/httpd/ssl/zabbix.crt
+
+- name: Start service httpd
+  service:
+    name: httpd
+    enabled: yes
+    state: restarted
+
+- name: Start service php-fpm
+  service:
+      name: php-fpm
+      enabled: yes
+      state: restarted
+...
