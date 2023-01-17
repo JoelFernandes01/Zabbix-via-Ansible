@@ -1,0 +1,41 @@
+---
+# defaults file for update-centos-redhat.yml
+timezone: America/Sao_Paulo
+
+common_group_redhat:
+  - "@Development Tools"
+
+common_packages_redhat:
+  - epel-release
+  - bind-utils
+  - bc
+  - bzip2
+  - curl
+  - git
+  - htop
+  - iptraf
+  - lsof
+  - mtr
+  - net-tools
+  - nmap
+  - pv
+  - tcpdump
+  - telnet
+  - unzip
+  - vim
+  - wget
+  - bash-completion
+  - tree
+  - gcc
+  - jq
+  - python3-pip
+  - python39
+  - python39-devel
+  - python39-pip
+  - net-snmp-utils
+
+#selinux_state: "disabled"
+#selinux_policy: "targeted"
+
+
+

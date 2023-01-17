@@ -1,0 +1,31 @@
+---
+# defaults file for mysql-redhat8
+## Variáveis MySQL
+mysql_root_user: "root"
+mysql_root_pass: "123@Mudar"
+mysql_host: "zbx-prx.connect.local"
+
+mysql_packages:
+  - mysql-server
+  - python3-PyMySQL
+  - mysql-devel
+ansible_python_interpreter: /usr/bin/python3
+
+## Variáveis Zabbix
+zabbix_release: "6.0"
+zabbix_version: "6.0-2"
+zabbix_packages:
+  - zabbix-sql-scripts
+  - zabbix-proxy-mysql
+ 
+mysql_zbx_mdb: "zbxprxmdb"
+mysql_zbx_pass: "123@Mudar"
+mysql_zbx_user: "zbxusrprx"
+
+zbx_srv_addr_01: "zbx-srv-01.connect.local"
+zbx_srv_addr_02: "zbx-srv-02.connect.local"
+zbx_srv_port: "10051"
+zbx_loc_addr: "ansible_hostname"
+time_out: 30
+...
+

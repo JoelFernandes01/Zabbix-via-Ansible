@@ -1,0 +1,70 @@
+---
+# tasks file for update-redhat8
+- name: Get the OS platform
+  command: cat /etc/redhat-release
+  register: redhatRelease
+
+- name: Print the redhat-release
+  debug: msg={{ redhatRelease.stdout }}
+
+- name: Install the latest version of EPEL-RELEASE
+  dnf:
+    name: epel-release
+    state: latest
+
+#- name: Install the vim editor
+#  dnf:
+#    name: vim
+#    state: absent
+
+- name: Upgrade all packages
+  dnf:
+    name: '*'
+    state: latest
+    update_cache: yes
+
+- name: Install Common Packages
+  yum: 
+    name: "{{ common_packages_redhat }}" 
+    state: latest
+
+- name: Install Group Packages
+  yum: 
+    name: "{{ common_group_redhat }}" 
+    state: latest
+#    become: yes
+
+#- name: Install Build Tools
+#  yum:
+#    name: "@Development tools"
+#    state: latest
+#  become: yes
+
+# Firewall Configuration
+#- name: Configure Firewall
+#    firewalld: zone=public service=http permanent=yes state=enabled
+ 
+- name: Disable the Firewall
+  command: systemctl disable firewalld
+
+#- name: Disabling Firewall
+#  systemd: 
+#    name: firewalld 
+#    state: disabled
+#  command: systemctl disable firewalld
+
+- name: copy Template hosts
+  template:
+    dest: /etc/hosts
+    src: /etc/hosts
+
+#- name: SELinux policy and state
+#  ansible.posix.selinux:
+#    state: "{{ selinux_state }}"
+#    policy: "{{ selinux_policy }}"
+#  notify: relabel and reboot
+
+#- name: reboot server
+#  command: systemctl reboot 
+
+...

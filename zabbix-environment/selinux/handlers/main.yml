@@ -1,0 +1,15 @@
+---
+# handlers file for selinux
+#
+#- name: relabel files on next boot
+#  ansible.builtin.file:
+#    path: "/.autorelabel"
+#    state: touch
+#  when:
+#    - selinux_state != 'disabled'
+#  listen: "relabel and reboot"
+
+- name: reboot host
+  ansible.builtin.reboot:
+  listen: "relabel and reboot"
+

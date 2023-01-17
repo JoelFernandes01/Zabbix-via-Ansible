@@ -1,0 +1,44 @@
+---
+# tasks file for winsrv-agent
+- name: Download Opmon Agent for Windows
+  win_get_url:
+    url: http://www.opservices.com.br/files/agentes/Windows/opmonagent.0.4.4.23-64bits.exe
+    dest: C:\Users\Administrator\Downloads\opmonagent.0.4.4.23-64bits.exe
+
+
+#- name: Mudando de pasta
+#  ansible.windows.win_shell: C:\Users\Administrator\Downloads\
+#  args:
+#    chdir: C:\Users\Administrator\Downloads\
+
+#cd : Set-Location "Q:\My Test Folder"
+
+
+#- name: Entrando na pasta
+#  ansible.windows.win_command: Set-Location "C:\Users\Administrator\Downloads"
+
+- name: Extraindo o arquivo
+  ansible.windows.win_command: C:\Users\Administrator\Downloads\opmonagent.0.4.4.23-64bits.exe
+
+# -DestinationPath C:\Users\Administrator\Downloads\
+
+#Expand-Archive -Path c:\Download\Draft.Zip -DestinationPath C:\Reference
+
+
+#- name: Install Zabbix Agent
+#  win_command: msiexec /i "C:\Users\Administrator\Downloads\zabbix_agent.msi" /qn^ SERVER="{{zbx_srv_addr_01}}"
+
+#- name: Copy Template Zabbix Agent
+#  win_template:
+#    src: winsrv-agent/templates/zabbix_agent2.conf
+#    dest: 'C:\Program Files\Zabbix Agent\zabbix_agent2.conf'
+
+#- name: Restart a service
+#  win_service:
+#    name: Zabbix Agent
+#    state: restarted
+
+
+
+
+

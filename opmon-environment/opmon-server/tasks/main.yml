@@ -1,0 +1,18 @@
+---
+# tasks file for opmon
+# Iniciando e habilitando o Firewalld
+#- name: Parando e desabilitando o Firewalld
+#  service:
+#    name: firewalld
+#    state: stop
+#    enabled: disable
+
+- name: copy Template hosts
+  template:
+    dest: /etc/hosts
+    src: /etc/hosts
+
+- name: Instalando o Opmon via script
+  shell: curl http://repo.opservices.com/rpms/latest/opmon-install | bash
+
+...

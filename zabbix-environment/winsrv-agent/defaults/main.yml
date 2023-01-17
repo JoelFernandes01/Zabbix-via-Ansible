@@ -1,0 +1,13 @@
+---
+# defaults file for zabbix-agent2
+zabbix_release: "6.0"
+zabbix_version: "6.0-2"
+zabbix_agent_package: 
+  - zabbix-agent2
+
+zbx_srv_addr_01: "zbx-srv-01.connect.local"
+zbx_srv_addr_02: "zbx-srv-02.connect.local"
+zbx_srv_addr_03: "zbx-srv-03.connect.local"
+server_port: "10012"
+time_out: "30"
+zbx_loc_addr: "Zabbix Server"

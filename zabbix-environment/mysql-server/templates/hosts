@@ -1,0 +1,19 @@
+#127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+#::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+192.168.1.12	ads.connect.local ads
+
+## Ambiente Ansible ##
+192.168.1.15	ansible-server-01.connect.local	ansible-server-01
+#192.168.1.16	ansible-target-01.connect.local	ansible-target-01
+#192.168.1.17	ansible-target-02.connect.local ansible-target-02
+#192.168.1.18	ansible-target-03.connect.local ansible-target-03
+
+## Ambiente Zabbix ##
+192.168.1.20	zbx-srv-01.connect.local	zbx-srv-01
+192.168.1.21	zbx-mdb.connect.local		zbx-mdb
+192.168.1.22	zbx-srv-02.connect.local	zbx-srv-02
+192.168.1.23	zbx-frt.connect.local		zbx-frt
+192.168.1.25	zbx-prx.connect.local		zbx-prx
+#192.168.1.60	zbx-srv.connect.local		zbx-srv
+192.168.1.90	srv-psg.connect.local		srv-psg

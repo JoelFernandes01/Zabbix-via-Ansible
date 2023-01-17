@@ -1,0 +1,20 @@
+---
+# defaults file for zabbix-front
+zabbix_release: "6.0"
+zabbix_version: "6.0-2"
+zabbix_packages:
+  - zabbix-apache-conf
+  - zabbix-server-mysql
+  - httpd
+
+mysql_zbx_mdb: "zbxsrvmdb"
+mysql_zbx_pass: "123@Mudar"
+mysql_zbx_user: "zbxusr"
+mysql_host: "zbx-dbm.connect.local"
+
+zbx_srv_addr_01: "zbx-srv-01.connect.local"
+zbx_srv_port: "10051"
+zbx_frt_addr: "zbx-frt.connect.local"
+zbx_loc_addr: "Zabbix Front"
+
+...

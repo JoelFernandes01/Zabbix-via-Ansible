@@ -1,0 +1,39 @@
+---
+# tasks file for grafana-server
+# Iniciando e habilitando o Firewalld
+- name: Iniciando e habilitando o Firewalld
+  service:
+    name: firewalld
+    state: stopped
+    enabled: false
+
+- name: Configurando as regras do Firewall
+  firewalld:
+    zone: public
+    service: grafana
+    permanent: yes
+    state: enabled
+#  loop:
+#    - grafana
+
+- name: Restart o serviço Firewalld
+  service:
+    name: firewalld
+    state: stopped
+
+- name: Instalando o repositório e instalar o Grafana
+  dnf:
+    name: https://dl.grafana.com/oss/release/grafana-9.0.8-1.x86_64.rpm 
+    state: present
+    disable_gpg_check: yes
+
+- name: Instalando o Plugins do Zabbix
+  shell:
+    cmd: grafana-cli plugins install alexanderzobnin-zabbix-app 
+
+- name: Start service Grafana
+  service:
+      name: grafana-server
+      enabled: yes
+      state: restarted
+...

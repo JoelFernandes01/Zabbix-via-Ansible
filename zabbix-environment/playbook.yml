@@ -1,0 +1,44 @@
+#- hosts: PfSenses
+#  become: true
+
+#- hosts: Windows
+#  become: false
+#  roles:
+#    - winsrv-agent
+#    - opmon-agent-windows
+
+#- hosts: Opmon
+#  become: true
+#  roles:
+#    - selinux
+#    - firewalld
+#    - update-redhat8
+#    - opmon-server
+#    - opmon-agent-linux
+
+- hosts: Zabbix
+  become: true
+  roles:
+#    - selinux
+#    - firewalld
+    - update-redhat8
+#    - mysql-server
+#    - zabbix-front
+#    - zabbix-front-ssl
+#    - zabbix-server-ha-01
+#    - zabbix-server-ha-02
+#    - grafana-server
+#    - zabbix-proxy 
+#    - zabbix-agent
+    
+#- hosts: localhost
+#  become: true
+#  roles:
+#    - update-redhat8
+
+#- hosts: PostgreSQL
+#  become: true
+#  roles:
+#    - update-redhat8
+#    - role-postgresql
+

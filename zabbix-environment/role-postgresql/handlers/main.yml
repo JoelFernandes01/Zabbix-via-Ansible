@@ -1,0 +1,24 @@
+---
+# handlers file for role-postgresql
+
+- name: Restart Postgresql
+  systemd:
+    name: postgresql-14
+    state: restarted
+
+- name: Start Postgresql
+  systemd:
+    name: postgresql-14
+    state: started
+
+- name: Stop Postgresql
+  systemd:
+    name: postgresql-14
+    state: stopped
+
+- name: Enable Postgresql
+  systemd:
+    name: postgresql-14
+    enabled: yes
+
+

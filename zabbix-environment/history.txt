@@ -1,0 +1,1000 @@
+    4  ansible-playbook playbook.yml
+    5  vim grafana-server/tasks/main.yml 
+    6  ansible-playbook playbook.yml
+    7  vim grafana-server/tasks/main.yml 
+    8  ansible-playbook playbook.yml
+    9  vim grafana-server/tasks/main.yml 
+   10  ansible-playbook playbook.yml
+   11  vim /etc/ansible/hosts
+   12  ansible-playbook playbook.yml
+   13  reboot 
+   14  pwd
+   15  cd /ansible-roles/ansible-lab/
+   16  vim playbook.yml 
+   17  vim /etc/ansible/hosts
+   18  vim grafana-server/tasks/main.yml 
+   19  ansible-playbook playbook.yml 
+   20  vim grafana-server/tasks/main.yml 
+   21  ansible-playbook playbook.yml 
+   22  vim grafana-server/tasks/main.yml 
+   23  vim /etc/ansible/hosts
+   24  ansible-playbook playbook.yml 
+   25  ansible Zabbix -m ping
+   26  shutdown -h now
+   27  vim /etc/ansible/hosts
+   28  ansible Zabbix -m ping
+   29  vim /etc/ansible/hosts
+   30  ansible Zabbix -m ping
+   31  vim /etc/ansible/hosts
+   32  ansible Zabbix -m ping
+   33  vim /etc/ansible/hosts
+   34  ansible Zabbix -m ping
+   35  vim /etc/ansible/hosts
+   36  cd /ansible-roles/ansible-lab/
+   37  ll
+   38  vim playbook.yml 
+   39  ansible-playbook playbook.yml 
+   40  cat /etc/hosts 
+   41  ansible Zabbix -m ping
+   42  ll conf-files/
+   43  vim playbook.yml 
+   44  ansible Zabbix -m ping
+   45  ansible-playbook playbook.yml 
+   46  vim playbook.yml 
+   47  vim /etc/ansible/hosts
+   48  ansible-playbook playbook.yml 
+   49  ansible Zabbix -m ping
+   50  cat /etc/hosts 
+   51  ls conf-files/
+   52  ll
+   53  cd conf-files/
+   54  ll
+   55  pwd
+   56  ll
+   57  cd ..
+   58  ll
+   59  ansible-galaxy init zabbix-front-ssl
+   60  cp zabbix-front/tasks/main.yml zabbix-front-ssl/tasks/
+   61  cp conf-files/php.ini zabbix-front-ssl/tasks/
+   62  cp conf-files/php.ini zabbix-front-ssl/files
+   63  cp conf-files/ssl.conf zabbix-front-ssl/files
+   64  cp conf-files/httpd.conf zabbix-front-ssl/files
+   65  ll -lazabbix-front-ssl/files
+   66  ll -la zabbix-front-ssl/files
+   67  cp zabbix-front/defaults/main.yml zabbix-front-ssl/defaults/
+   68  vim zabbix-front-ssl/defaults/main.yml 
+   69  vim zabbix-front-ssl/tasks/main.yml 
+   70  ls -la zabbix-front-ssl/files/
+   71  vim zabbix-front-ssl/tasks/main.yml 
+   72  ls -la zabbix-front-ssl/files/
+   73  vim zabbix-front-ssl/tasks/main.yml 
+   74  ll
+   75  cd conf-files/
+   76  pwd
+   77  ll
+   78  cd ..
+   79  vim zabbix-front-ssl/tasks/main.yml 
+   80  ansible Zabbix -m setup
+   81  ll
+   82  vim playbook.yml 
+   83  ansible-playbook playbook.yml -C
+   84  vim zabbix-front-ssl/tasks/main.yml 
+   85  ansible-playbook playbook.yml -C
+   86  ansible-playbook playbook.yml 
+   87  vim zabbix-front-ssl/tasks/main.yml 
+   88  ansible-playbook playbook.yml -vvv
+   89  ll /etc/httpd/ssl/private
+   90  vim /etc/ansible/hosts
+   91  vim zabbix-front-ssl/tasks/main.yml 
+   92  ansible-playbook playbook.yml
+   93  vim zabbix-front-ssl/tasks/main.yml 
+   94  ansible-playbook playbook.yml -
+   95  ansible-playbook playbook.yml
+   96  vim zabbix-front-ssl/tasks/main.yml 
+   97  ansible-playbook playbook.yml
+   98  vim zabbix-front-ssl/tasks/main.yml 
+   99  ansible-playbook playbook.yml
+  100  vim zabbix-front-ssl/tasks/main.yml 
+  101  ll zabbix-front-ssl/zabbix-front-ssl/files
+  102  ll zabbix-front-ssl/zabbix-front-ssl/
+  103  pwd
+  104  ll
+  105  ll zabbix-front-ssl/files/
+  106  vim zabbix-front-ssl/tasks/main.yml 
+  107  ll zabbix-front-ssl/files/
+  108  vim zabbix-front-ssl/tasks/main.yml 
+  109  ansible-playbook playbook.yml -vvv
+  110  vim zabbix-front-ssl/tasks/main.yml 
+  111  ansible-playbook playbook.yml -vvv
+  112  vim zabbix-front-ssl/tasks/main.yml 
+  113  ansible-playbook playbook.yml -vvv
+  114  vim zabbix-front-ssl/tasks/main.yml 
+  115  ll zabbix-front-ssl/files/zabbix.key
+  116  ll zabbix-front-ssl/files/
+  117  tree zabbix-front-ssl
+  118  cp conf-files/zabbix.key zabbix-front-ssl/files/
+  119  cp conf-files/zabbix.crt zabbix-front-ssl/files/
+  120  ll zabbix-front-ssl/files/zabbix.key
+  121  ansible-playbook playbook.yml
+  122  vim zabbix-front-ssl/tasks/main.yml 
+  123  ansible-playbook playbook.yml
+  124  vim zabbix-front-ssl/tasks/main.yml 
+  125  vim zabbix-front/tasks/main.yml 
+  126  ansible Zabbix -m setup
+  127  ansible Zabbix -m ping
+  128  vim playbook.yml 
+  129  ansible-playbook playbook.yml -c
+  130  ansible-playbook playbook.yml -C
+  131  vim playbook.yml 
+  132  ansible-playbook playbook.yml -C
+  133  vim zabbix-front/defaults/main.yml 
+  134  vim zabbix-front/tasks/main.yml 
+  135  vim zabbix-front/defaults/main.yml 
+  136  vim zabbix-front/tasks/main.yml 
+  137  vim zabbix-server-ha-01//tasks/main.yml 
+  138  vim zabbix-front/tasks/main.yml 
+  139  ansible-playbook playbook.yml -C
+  140  vim zabbix-front/tasks/main.yml 
+  141  ansible-playbook playbook.yml -C
+  142  vim zabbix-front/tasks/main.yml 
+  143  ansible-playbook playbook.yml -C
+  144  vim zabbix-front/tasks/main.yml 
+  145  ansible-playbook playbook.yml -C
+  146  ansible-playbook playbook.yml
+  147  vim playbook.yml 
+  148  ansible-playbook playbook.yml
+  149  vim zabbix-front-ssl/tasks/main.yml 
+  150  ansible-playbook playbook.yml
+  151  vim zabbix-front-ssl/tasks/main.yml 
+  152  ansible-playbook playbook.yml
+  153  vim zabbix-front-ssl/tasks/main.yml 
+  154  ansible-playbook playbook.yml
+  155  vim playbook.yml 
+  156  vim /etc/ansible/hosts
+  157  ansible-playbook playbook.yml
+  158  vim /etc/ansible/hosts
+  159  vim playbook.yml 
+  160  ansible-playbook playbook.yml
+  161  vim playbook.yml 
+  162  ansible-playbook playbook.yml
+  163  vim playbook.yml 
+  164  ansible Zabbix -m ping
+  165  ansible-playbook playbook.yml
+  166  vim /etc/ansible/hosts
+  167  vim playbook.yml 
+  168  ansible-playbook playbook.yml
+  169  vim playbook.yml 
+  170  vim /etc/ansible/hosts
+  171  ansible-playbook playbook.yml
+  172  ssh-copy-id root@prx-srv.connect.local
+  173  cat /etc/hosts 
+  174  ssh-copy-id root@zbx-prx.connect.local
+  175  ansible-playbook playbook.yml
+  176  vim playbook.yml 
+  177  cat /etc/hosts 
+  178  ssh-copy-id root@zbx-srv-02.connect.local
+  179  vim /etc/ansible/hosts
+  180  ansible-playbook playbook.yml
+  181  vim /etc/ansible/hosts
+  182  cd /ansible-roles/ansible-lab/
+  183  cat playbook.yml 
+  184  vim playbook.yml 
+  185  ansible-playbook playbook.yml -C
+  186  ansible Zabbix -m ping
+  187  ansible-playbook playbook.yml -C
+  188  ll
+  189  cat zabbix-server-ha-01/tasks/main.yml 
+  190  cat zabbix-server-ha-01/tasks/main.yml | more
+  191  vim zabbix-proxy/tasks/main.yml 
+  192  vim /etc/ansible/hosts
+  193  vim playbook.yml 
+  194  ansible-playbook playbook.yml
+  195  vim playbook.yml 
+  196  vim zabbix-proxy/tasks/main.yml 
+  197  ansible-playbook playbook.yml
+  198  vim zabbix-proxy/tasks/main.yml 
+  199  ansible-playbook playbook.yml
+  200  vim zabbix-proxy/tasks/main.yml 
+  201  ansible-playbook playbook.yml
+  202  vim playbook.yml 
+  203  vim /etc/ansible/hosts
+  204  ansible-playbook playbook.yml -C
+  205  ls conf-files/
+  206  ls -la conf-files/
+  207  vim /etc/ansible/hosts
+  208  ansible Zabbix -m ping
+  209  cat playbook.yml 
+  210  cat /etc/ansible/hosts
+  211  vim /etc/ansible/hosts
+  212  ansible-playbook playbook.yml -C
+  213  ansible-playbook playbook.yml
+  214  vim grafana-server/tasks/main.yml 
+  215  ansible-playbook playbook.yml
+  216  ll conf-files/
+  217  ll -la conf-files/
+  218  vim mysql-server/tasks/main.yml 
+  219  vim playbook.yml 
+  220  vim /etc/ansible/hosts
+  221  ansible-playbook playbook.yml -C
+  222  vim mysql-server/tasks/main.yml 
+  223  ansible-playbook playbook.yml 
+  224  vim mysql-server/tasks/main.yml 
+  225  ansible-playbook playbook.yml 
+  226  vim mysql-server/tasks/main.yml 
+  227  ansible-playbook playbook.yml 
+  228  vim /etc/ansible/hosts
+  229  vim playbook.yml 
+  230  ansible Windows -m ping
+  231  pip3 install pywinrm
+  232  ansible Windows -m ping
+  233  cat /etc/ansible/hosts
+  234  vim /etc/ansible/hosts
+  235  ansible Windows -m ping
+  236  vim /etc/ansible/hosts
+  237  ansible Windows -m ping
+  238  vim /etc/ansible/hosts
+  239  ansible Windows -m ping
+  240  telnet
+  241  cat /etc/hosts 
+  242  ping ads.connect.local
+  243  telnet
+  244  ansible Windows -m ping
+  245  ping ads.connect.local
+  246  telnet
+  247  exit
+  248  reboot 
+  249  cd /ansible-roles/ansible-lab/
+  250  vim /etc/ansible/hosts
+  251  ansible Windows -m ping
+  252  systemctl disable firewalld
+  253  systemctl stop firewalld
+  254  systemctl status firewalld
+  255  ansible Windows -m ping
+  256  telnet 192.168.1.12 
+  257  ping ads.connect.local
+  258  telnet ads.connect.local
+  259  vim /etc/ansible/hosts
+  260  ansible Windows -m ping
+  261  vim /etc/ansible/hosts
+  262  ansible Windows -m ping
+  263  vim /etc/ansible/hosts
+  264  ansible Windows -m ping
+  265  vim /etc/ansible/hosts
+  266  ansible Windows -m ping
+  267  telnet ads.connect.local 5986
+  268  vim /etc/ansible/hosts
+  269  ansible Windows -m ping
+  270  dnf search pywinrm
+  271  pip install "pywinrm>=0.3.0"
+  272  python3 pip install "pywinrm>=0.3.0"
+  273  python3.6 pip install "pywinrm>=0.3.0"
+  274  python3 -m pip install "pywinrm>=0.3.0"
+  275  ansible Windows -m ping
+  276  python3 -m pip install "pywinrm>=0.3.0"
+  277  python3 -m pip list
+  278  python3 -m pip list | grep pywinrm
+  279  ping ads.connect.local
+  280  shutdown -n now
+  281  shutdown -h now
+  282  cd /ansible-roles/ansible-lab/
+  283  ll
+  284  shutdown -h now 
+  285  ll
+  286  cd /ansible-roles/ansible-lab/
+  287  ansible Zabbix -m ping
+  288  vim /etc/ansible/hosts
+  289  ansible Zabbix -m ping
+  290  +
+  291  ll
+  292  ll -la conf-files/
+  293  python3.9 -v
+  294  python3.9 -V
+  295  dnf install python39
+  296  pip3 install pywinrm
+  297  su pip3 install pywinrm
+  298  su - pip3 install pywinrm
+  299  pip3 install --root pywinrm
+  300  python3 -m pip install pywinrm
+  301  pip3
+  302  set
+  303  pip3.9 install pywinrm
+  304  ansible Windows -m ping
+  305  pip3.9 install winrm
+  306  ansible Windows -m ping
+  307  dnf list installed | grep winrm
+  308  dnf search winrm
+  309  dnf instal python38-winrm
+  310  dnf install python38-winrm
+  311  dnf list installed | grep winrm
+  312  ansible Windows -m ping
+  313  dnf update 
+  314  dnf upgrade
+  315  ansible Windows -m ping
+  316  vim /etc/ansible/hosts
+  317  ansible Windows -m ping
+  318  vim /etc/ansible/hosts
+  319  ansible Windows -m ping
+  320  vim /etc/ansible/hosts
+  321  ansible Windows -m ping
+  322  vim /etc/ansible/hosts
+  323  ansible Windows -m ping
+  324  vim /etc/ansible/hosts
+  325  ansible Windows -m ping
+  326  vim /etc/ansible/hosts
+  327  ansible Windows -m ping
+  328  vim /etc/ansible/hosts
+  329  ansible Windows -m ping
+  330  shutdown -h now
+  331  cd /ansible-roles/ansible-lab/
+  332  ansible Windows -m ping
+  333  vim /etc/ansible/hosts
+  334  ansible Windows -m ping
+  335  cat /etc/hosts
+  336  shutdown -h now
+  337  cd /ansible-roles/ansible-lab/
+  338  ll
+  339  ll -la conf-files/
+  340  ll
+  341  ll conf-files/
+  342  shutdown -h now
+  343  cd /ansible-roles/ansible-lab/
+  344  ansible Zabbix -m ansible.buitin.setup
+  345  ansible Zabbix -m setup | grep ansible.buiti
+  346  ansible Zabbix -m ping
+  347  ansible Zabbix -m setup | grep ansible.buiti
+  348  ansible Zabbix -m setup | grep ansible.bu
+  349  ansible Zabbix -m setup | grep ansible.
+  350  ll conf-files/
+  351  shutdown -h now
+  352  exit
+  353  cd /ansible-roles/ansible-lab/
+  354  ll
+  355  cat mysql-server/defaults/main.yml 
+  356  ll
+  357  cat /etc/hosts 
+  358  cat mysql-server/defaults/main.yml 
+  359  ll conf-files/
+  360  ssh-copy-id root@zbx-srv-02.connect.local
+  361  cd conf-files/
+  362  ll -la
+  363  rm -rf zbxsrvmdb.Sunday-31-07-2022.sql
+  364  ll
+  365  ll -la
+  366  rm -rf zbxsrvmdb.31-07-22-11h-29m.sql zbxsrvmdb.31-07-22-Julh-07m.sql
+  367  ll -la
+  368  rm -rf zbxsrvmdb.31-07-22-11h-31m.sql
+  369  ll -la
+  370  ls -la zbxsrvmdb.31-07-22-12h-20m.sql
+  371  ll -la
+  372  rm -rf zbxsrvmdb.31-07-22-12h-20m.sql zbxsrvmdb.31-07-22-12h-30m.sql
+  373  ll -la
+  374  vim /etc/ansible/hosts
+  375  ansible Zabbix -m ping
+  376  ll -la
+  377  rm -rf zbxsrvmdb.31-07-22-14h-15m.sql zbxsrvmdb.31-07-22-14h-19m.sql
+  378  ll -la
+  379  df -h
+  380  ll -la
+  381  ll 
+  382  cd ..
+  383  vim mysql-server/tasks/main.yml 
+  384  vim /etc/ansible/hosts
+  385  ansible Zabbix -m ping
+  386  ansible-playbook playbook.yml -C
+  387  vim /etc/ansible/hosts
+  388  ansible-playbook playbook.yml -C
+  389  vim /etc/ansible/hosts
+  390  ansible-playbook playbook.yml -C
+  391  vim playbook.yml 
+  392  ansible-playbook playbook.yml -C
+  393  vim playbook.yml 
+  394  ansible-playbook playbook.yml -C
+  395  vim playbook.yml 
+  396  vim /etc/ansible/hosts
+  397  vim mysql-server/tasks/main.yml 
+  398  ansible-playbook playbook.yml -C
+  399  vim mysql-server/tasks/main.yml 
+  400  ansible-playbook playbook.yml -C
+  401  vim mysql-server/tasks/main.yml 
+  402  ansible-playbook playbook.yml
+  403  ll
+  404  vim mysql-server/tasks/main.yml
+  405  ls -la conf-files/
+  406  cp conf-files/zbxsrvmdb.Sunday-31-07-2022.sql conf-files/zbxsrvmd.sql
+  407  ls -la conf-files/
+  408  ansible-playbook playbook.yml -C
+  409  cp conf-files/zbxsrvmd.sql mysql-server/files/
+  410  vim mysql-server/tasks/main.yml
+  411  ansible-playbook playbook.yml -C
+  412  ls -la mysql-server/files/zbxsrvmdb.sq
+  413  ls -la mysql-server/files/zbxsrvmdb.sql
+  414  ls -la mysql-server/files/
+  415  ls -la conf-files/
+  416  cp conf-files/zbxsrvmdb.Sunday-31-07-2022.sql conf-files/zbxsrvmdb.sql
+  417  rm -rf conf-files/zbxsrvmd.sql
+  418  ls -la conf-files/
+  419  cp conf-files/zbxsrvmdb.sql mysql-server/files/
+  420  ls -la mysql-server/files/
+  421  rm -rf mysql-server/files/zbxsrvmd.sql
+  422  ls -la mysql-server/files/
+  423  rm -rf mysql-server/files/zbxsrvmdb-21-07-22.sql.gz zbxsrvmdb-22-07-22.sql.gz
+  424  ls -la mysql-server/files/
+  425  rm -rf mysql-server/files/zbxsrvmdb-22-07-22.sql.gz
+  426  ls -la mysql-server/files/
+  427  ansible-playbook playbook.yml -C
+  428  ansible-playbook playbook.yml
+  429  vim mysql-server/tasks/main.yml
+  430  ansible-playbook playbook.yml
+  431  ll
+  432  ls conf-files/
+  433  ls -la conf-files/
+  434  df -h
+  435  ls -la conf-files/
+  436  reboot 
+  437  ls -la conf-files/
+  438  ls -la /ansible-roles/ansible-lab/conf-files/
+  439  shutdown -h now
+  440  ls -la /ansible-roles/ansible-lab/conf-files/
+  441  cd  /ansible-roles/ansible-lab/
+  442  ll
+  443  shutdown -h now
+  444  cd  /ansible-roles/ansible-lab/
+  445  ll
+  446  vim playbook.yml 
+  447  vim /etc/ansible/hosts
+  448  ansible Windows -m ping
+  449  vim /etc/ansible/hosts
+  450  vim /etc/hosts 
+  451  ansible Windows -m ping
+  452  vim /etc/ansible/hosts
+  453  ansible Windows -m ping
+  454  ping ads-srv.connect.local
+  455  vim /etc/ansible/hosts
+  456  ansible Windows -m ping
+  457  vim /etc/ansible/hosts
+  458  ansible Windows -m ping
+  459  vim /etc/ansible/hosts
+  460  ansible Windows -m ping
+  461  ansible Windows -m winping
+  462  ansible Windows -m 
+  463  ansible Windows -m win_ping
+  464  ll -la conf-files/
+  465  cat /etc/hosts 
+  466  ll -la conf-files/
+  467  ll -la conf-files/Diario.zbxsrvmdb.01-08-22-18h-00m.sql
+  468  rm -rf conf-files/Diario.zbxsrvmdb.01-08-22-18h-00m.sql
+  469  ll -la conf-files/
+  470  vim mysql-server/tasks/main.yml 
+  471  ll -la conf-files/
+  472  ll -la conf-files/Diario.zbxsrvmdb.01-08-22-12h-00m.sql
+  473  cp conf-files/Diario.zbxsrvmdb.01-08-22-12h-00m.sql mysql-server/files/
+  474  cd mysql-server/files/
+  475  ll -la
+  476  rm -rf zbxsrvmdb.sql
+  477  ll -la
+  478  mv Diario.zbxsrvmdb.01-08-22-12h-00m.sql zbxsrvmdb.sql
+  479  ll
+  480  cd ..
+  481  ll
+  482  cd ..
+  483  ll
+  484  vim playbook.yml 
+  485  vim /etc/ansible/hosts
+  486  ansible-playbook playbook.yml -C
+  487  ansible-playbook playbook.yml
+  488  vim mysql-server/tasks/main.yml 
+  489  ansible-playbook playbook.yml
+  490  vim mysql-server/tasks/main.yml 
+  491  ansible-playbook playbook.yml
+  492  vim mysql-server/tasks/main.yml 
+  493  ansible-playbook playbook.yml
+  494  vim mysql-server/tasks/main.yml 
+  495  ls conf-files/
+  496  ls -la conf-files/
+  497  cp conf-files/Semanal.zbxsrvmdb.31-07-22-23h-59m.sql mysql-server/files/
+  498  rm -rf mysql-server/files/zbxsrvmdb.sql 
+  499  mv mysql-server/files/Semanal.zbxsrvmdb.31-07-22-23h-59m.sql zbxsrvmdb.sql
+  500  ls -la  mysql-server/files/
+  501  cp conf-files/Semanal.zbxsrvmdb.31-07-22-23h-59m.sql mysql-server/files/
+  502  cd   mysql-server/files/
+  503  ll -la 
+  504  mv Semanal.zbxsrvmdb.31-07-22-23h-59m.sql zbxsrvmdb.sql
+  505  ll
+  506  cd ..
+  507  ll -la 
+  508  cd ..
+  509  ll -la 
+  510  ansible-playbook playbook.yml
+  511  ll -la 
+  512  vim mysql-server/tasks/main.yml 
+  513  ansible-playbook playbook.yml
+  514  cp conf-files/Diario.zbxsrvmdb.01-08-22-12h-00m.sql mysql-server/files/
+  515  cd   mysql-server/files/
+  516  ll -la
+  517  rm -rf mysql-server/files/zbxsrvmdb.sql 
+  518  ll -la
+  519  pwd
+  520  rm -rf zbxsrvmdb.sql 
+  521  ll -la 
+  522  pwd
+  523  mv Diario.zbxsrvmdb.01-08-22-12h-00m.sql zbxsrvmdb.sql
+  524  ll -la 
+  525  cd ..
+  526  ll
+  527  cd ..
+  528  ll
+  529  rm -rf zbxsrvmdb.sql 
+  530  ll
+  531  vim /etc/ansible/hosts
+  532  vim playbook.yml 
+  533  vim /etc/ansible/hosts
+  534  ansible Zabbix -m ping
+  535  ansible-playbook playbook.yml 
+  536  vim /etc/ansible/hosts
+  537  vim playbook.yml 
+  538  ansible-playbook playbook.yml 
+  539  vim playbook.yml 
+  540  vim /etc/ansible/hosts
+  541  la -la  mysql-server/files/
+  542  ll -la  mysql-server/files/
+  543  vim mysql-server/tasks/main.yml 
+  544  ansible-playbook playbook.yml 
+  545  rm -rf mysql-server/files/zbxsrvmdb.sql 
+  546  ls -la  mysql-server/files/
+  547  ls conf-files/
+  548  ls -la conf-files/
+  549  ls -la conf-files/Diario.zbxsrvmdb.01-08-22-12h-00m.sql
+  550  vim mysql-server/tasks/main.yml 
+  551  ansible-playbook playbook.yml 
+  552  vim /etc/ansible/hosts
+  553  ansible-playbook playbook.yml -C
+  554  vim /etc/ansible/hosts
+  555  ansible-playbook playbook.yml -C
+  556  shutdown -h now
+  557  cd /ansible-roles/ansible-lab/
+  558  ll
+  559  ls -la conf-files/
+  560  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-22h-46m.sql Diario.zbxsrvmdb.Monday-01-08-22-22h-50m.sql
+  561  ls -la conf-files/
+  562  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-22h-50m.sql
+  563  ls -la conf-files/
+  564  df -h
+  565  ls -la conf-files/Diario.zbxsrvmdb.Monday-01-08-22-22h-55m.sql
+  566  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-22h-55m.sql
+  567  ls -la conf-files/
+  568  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-22h-54m.sql
+  569  ls -la conf-files/
+  570  ls -la conf-files/Semanal.zbxsrvmdb.Monday-01-08-22-22h-57m.sql
+  571  rm -rf  conf-files/Semanal.zbxsrvmdb.Monday-01-08-22-22h-57m.sql
+  572  ls -la conf-files/
+  573  ls -la conf-files/Diario.zbxsrvmdb.Monday-01-08-22-23h-14m.sql
+  574  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-23h-14m.sql
+  575  ls -la conf-files/
+  576  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-23h-10m.sql
+  577  ls -la conf-files/
+  578  rm -rf conf-files/Diario.zbxsrvmdb.Monday-01-08-22-23h-17m.sql
+  579  shutdown -h now
+  580  pwd
+  581  cd /ansible-roles/ansible-lab/
+  582  vim playbook.yml 
+  583  vim /etc/ansible/hosts
+  584  vim mysql-server/tasks/main.yml 
+  585  ansible-playbook playbook.yml 
+  586  ansible Zabbix -m ping
+  587  vim /etc/ansible/hosts
+  588  ansible Zabbix -m ping
+  589  vim /etc/ansible/hosts
+  590  ansible Zabbix -m ping
+  591  vim /etc/ansible/hosts
+  592  ansible Zabbix -m ping
+  593  vim /etc/ansible/hosts
+  594  ansible Zabbix -m ping
+  595  vim /etc/ansible/hosts
+  596  ansible Zabbix -m ping
+  597  shutdown -h now
+  598  cd /ansible-roles/ansible-lab/
+  599  cat playbook.yml 
+  600  ansible Zabbix -m ping
+  601  ansible-playbook playbook.yml 
+  602  vim mysql-server/tasks/main.yml 
+  603  ansible-playbook playbook.yml 
+  604  vim mysql-server/tasks/main.yml 
+  605  ansible-playbook playbook.yml 
+  606  vim mysql-server/tasks/main.yml 
+  607  ansible-playbook playbook.yml 
+  608  cat /etc/hosts 
+  609  ssh root@zbx-srv-01.connect.local
+  610  ssh root@zbx-frt.connect.local
+  611  ssh root@zbx-srv-01.connect.local
+  612  vim mysql-server/tasks/main.yml 
+  613  ansible-playbook playbook.yml 
+  614  vim mysql-server/tasks/main.yml 
+  615  ansible-playbook playbook.yml 
+  616  vim mysql-server/tasks/main.yml 
+  617  ansible-playbook playbook.yml 
+  618  shutdown -h now
+  619  cd /ansible-roles/ansible-lab/
+  620  vim mysql-server/tasks/main.yml 
+  621  ansible-playbook playbook.yml 
+  622  vim mysql-server/tasks/main.yml 
+  623  ansible-playbook playbook.yml 
+  624  vim mysql-server/tasks/main.yml 
+  625  ansible-playbook playbook.yml 
+  626  shutdown -h now
+  627  cd /ansible-roles/ansible-lab/
+  628  ll
+  629  vim playbook.yml 
+  630  vim /etc/ansible/hosts
+  631  ansible Windows -m win_ping
+  632  shutdown -h now
+  633  cd /ansible-roles/ansible-lab/
+  634  vim /etc/ansible/hosts
+  635  shutdown -h now
+  636  cd /ansible-roles/ansible-lab/
+  637  vim /etc/ansible/hosts
+  638  vim playbook.yml 
+  639  ansible Windows -m win_ping
+  640  vim /etc/ansible/hosts
+  641  ansible Windows -m win_ping
+  642  telnet 
+  643  ansible Windows -m win_ping
+  644  pip3.9 install python-certifi-win32
+  645  ansible Windows -m win_ping
+  646  dnf update
+  647  ansible Windows -m win_ping
+  648  dnf upgrade
+  649  ansible Windows -m win_ping
+  650  pip3.9 install python-certifi-win32
+  651  ansible Windows -m win_ping
+  652  vim /etc/ansible/hosts
+  653  ansible Windows -m win_ping
+  654  vim /etc/ansible/hosts
+  655  ansible Windows -m win_ping
+  656  vim /etc/ansible/hosts
+  657  ansible Windows -m win_ping
+  658  pip3.9 install "pywinrm>=0.3.0"
+  659  su pip3.9 install "pywinrm>=0.3.0"
+  660  pip install "pywinrm>=0.3.0"
+  661  pip3 install "pywinrm>=0.3.0"
+  662  pip3 install -help
+  663  pip3.9 install --root "pywinrm>=0.3.0"
+  664  dnf reinstall python
+  665  dnf list installed | grep python3
+  666  dnf reinstall python3
+  667  pip3 install "pywinrm>=0.3.0"
+  668  dnf install "pywinrm>=0.3.0"
+  669  3
+  670  shutdown -h now
+  671  cd /ansible-roles/ansible-lab/
+  672  ansible Windows -m win_ping
+  673  vim /etc/ansible/hosts
+  674  ansible Windows -m win_ping
+  675  vim /etc/ansible/hosts
+  676  ansible Windows -m win_ping
+  677  vim /etc/ansible/hosts
+  678  ansible Windows -m win_ping
+  679  vim /etc/ansible/hosts
+  680  ansible Windows -m win_ping
+  681  vim /etc/ansible/hosts
+  682  ansible Windows -m win_ping
+  683  vim /etc/ansible/hosts
+  684  ansible Windows -m win_ping
+  685  ansible Windows -m setup
+  686  vim /etc/ansible/hosts
+  687  ansible Windows -m win_ping
+  688  vim /etc/ansible/hosts
+  689  ansible Windows -m win_ping
+  690  vim /etc/ansible/hosts
+  691  ansible Windows -m win_ping
+  692  vim /etc/ansible/hosts
+  693  ansible Windows -m win_ping
+  694  vim /etc/ansible/hosts
+  695  ansible Windows -m win_ping
+  696  vim /etc/ansible/hosts
+  697  ansible Windows -m win_ping
+  698  vim /etc/ansible/hosts
+  699  ansible Windows -m win_ping
+  700  vim /etc/ansible/hosts
+  701  ansible Windows -m win_ping
+  702  vim /etc/ansible/hosts
+  703  ansible Windows -m win_ping
+  704  vim /etc/ansible/hosts
+  705  ansible Windows -m win_ping
+  706  vim /etc/ansible/hosts
+  707  ansible Windows -m win_ping
+  708  vim /etc/ansible/hosts
+  709  ansible Windows -m win_ping
+  710  vim /etc/ansible/hosts
+  711  ansible Windows -m win_ping
+  712  vim /etc/ansible/hosts
+  713  ansible Windows -m win_ping
+  714  vim /etc/ansible/hosts
+  715  ansible Windows -m win_ping
+  716  ansible Windows -m setup
+  717  cat winsrv-agent/defaults/main.yml 
+  718  cat winsrv-agent/tasks/main.yml 
+  719  vim winsrv-agent/defaults/main.yml 
+  720  cp zabbix-agent/defaults/main.yml winsrv-agent/defaults/
+  721  vim winsrv-agent/defaults/main.yml 
+  722  vim winsrv-agent/tasks/main.yml 
+  723  ansible-playbook playbook.yml -C
+  724  ls winsrv-agent/files/
+  725  ls winsrv-agent/templates/
+  726  vim winsrv-agent/templates/zabbix_agent2.conf 
+  727  ansible-playbook playbook.yml
+  728  vim winsrv-agent/tasks/main.yml 
+  729  ansible-playbook playbook.yml
+  730  vim winsrv-agent/tasks/main.yml 
+  731  ansible-playbook playbook.yml
+  732  vim winsrv-agent/tasks/main.yml 
+  733  ansible-playbook playbook.yml
+  734  vim winsrv-agent/tasks/main.yml 
+  735  ansible-playbook playbook.yml
+  736  vim winsrv-agent/tasks/main.yml 
+  737  ansible-playbook playbook.yml
+  738  vim winsrv-agent/templates/zabbix_agent2.conf 
+  739  ansible-playbook playbook.yml
+  740  vim winsrv-agent/tasks/main.yml 
+  741  shutdown -h now
+  742  cd /ansible-roles/ansible-lab/
+  743  ll
+  744  ansible-galaxy opmon-server
+  745  ansible-galaxy init opmon-server
+  746  ll 
+  747  vim playbook.yml 
+  748  vim /etc/hosts 
+  749  cat /etc/hosts 
+  750  vim /etc/ansible/hosts
+  751  ansible Opmon -m ping
+  752  ssh-copy-id root@opm-srv.connect.local
+  753  ansible Opmon -m ping
+  754  vim /etc/ansible/hosts
+  755  ansible Opmon -m ping
+  756  ll
+  757  vim playbook.yml 
+  758  ansible-playbook playbook.yml -C
+  759  ll -la
+  760  vim firewalld/tasks/main.yml 
+  761  vim firewalld/defaults/main.yml 
+  762  vim firewalld/tasks/main.yml 
+  763  ansible-playbook playbook.yml -C
+  764  ansible-playbook playbook.ym
+  765  ansible-playbook playbook.yml 
+  766  ansible-playbook playbook.ym
+  767  ansible-playbook playbook.yml
+  768  vim playbook.yml 
+  769  ansible-playbook playbook.yml -C
+  770  shutdown -h now
+  771  cd /ansible-roles/ansible-lab/
+  772  ll
+  773  cat opmon-server/tasks/main.yml 
+  774  cp zabbix-server-ha-01/tasks/main.yml opmon-server/tasks/
+  775  vim opmon-server/tasks/main.yml 
+  776  ansible-playbook playbook.yml -C
+  777  vim playbook.yml 
+  778  ansible-playbook playbook.yml -C
+  779  ansible-playbook playbook.yml
+  780  vim opmon-server/tasks/main.yml 
+  781  ansible Opmon -m ping
+  782  ssh-copy-id root@opm-srv.connect.local
+  783  ansible Opmon -m ping
+  784  vim playbook.yml 
+  785  cat update-redhat8/tasks/main.yml 
+  786  vim opmon-server/tasks/main.yml 
+  787  ansible-playbook playbook.yml
+  788  vim opmon-server/tasks/main.yml 
+  789  ansible Opmon -m ping
+  790  ansible-playbook playbook.yml
+  791  shutdown -h now
+  792  cd /ansible-roles/ansible-lab/
+  793  lls -la
+  794  ll -la 
+  795  cat playbook.yml 
+  796  ansible-playbook playbook.yml
+  797  ssh-copy-id root@opm-srv.connect.local
+  798  ansible-playbook playbook.yml
+  799  vim opmon-server/tasks/main.yml 
+  800  vim opmon-server/tasks/main.yml -vv
+  801  ansible-playbook playbook.yml -vvv
+  802  ansible-playbook playbook.yml
+  803  ll
+  804  ll -la
+  805  ansible-galaxy init opmon-agent-windows
+  806  ll -la
+  807  vim playbook.yml 
+  808  ansible-galaxy init opmon-agent-linux
+  809  shutdown -h now
+  810  cd /ansible-roles/ansible-lab/
+  811  ll -ls
+  812  ansible Opmon -m ping
+  813  vim /etc/ansible/hosts
+  814  ansible Opmon -m ping
+  815  vim opmon-agent-windows/tasks/main.yml 
+  816  vim playbook.yml 
+  817  ansible-playbook playbook.yml -C
+  818  ansible-playbook playbook.yml 
+  819  vim opmon-agent-windows/tasks/main.yml 
+  820  ansible-playbook playbook.yml 
+  821  shutdown -h now
+  822  exit
+  823  shutdown -h now
+  824  cd /ansible-roles/ansible-lab/
+  825  vim /etc/hosts 
+  826  ll
+  827  vim update-redhat8/tasks/main.yml 
+  828  vim /etc/ansible/hosts
+  829  ansible Opmon -m ping
+  830  ssh-copy-id root@jmx-srv.connect.local
+  831  ansible Opmon -m ping
+  832  vim /etc/ansible/hosts
+  833  ansible Opmon -m ping
+  834  vim /etc/ansible/hosts
+  835  ansible Opmon -m ping
+  836  vim /etc/ansible/hosts
+  837  ansible Opmon -m ping
+  838  vim /etc/ansible/hosts
+  839  ansible Opmon -m ping
+  840  vim /etc/ansible/hosts
+  841  ansible Opmon -m ping
+  842  vim playbook.yml 
+  843  ansible-playbook playbook.yml -C
+  844  ansible-playbook playbook.yml
+  845  vim playbook.yml 
+  846  shutdown -h now
+  847  cd /ansible-roles/ansible-lab/
+  848  cd /ansible-roles/ansible-lab/
+  849  cat /etc/hosts 
+  850  shutdown -h now
+  851  cd /ansible-roles/ansible-lab/
+  852  ll
+  853  shutdown -h now
+  854  cd /ansible-roles/ansible-lab/
+  855  ll
+  856  ping 192.168.252.69
+  857  ll
+  858  cat /etc/ansible/ansible.cfg 
+  859  cat /etc/ansible/ansible.conf
+  860  ll /etc/ansible/
+  861  cat /etc/ansible/hosts
+  862  ll /etc/ansible/
+  863  ll -la
+  864  ll
+  865  cat mysql-server/defaults/main.yml 
+  866  cat mysql-server/tasks/main.yml 
+  867  ll mysql-server/files/
+  868  ll mysql-server/templates/
+  869  cat playbook.yml 
+  870  ll
+  871  cat playbook.yml 
+  872  vim mysql-server/tasks/main.yml 
+  873  shutdown -h now
+  874  cd /ansible-roles/ansible-lab/
+  875  cat mysql-server/defaults/ma
+  876  cat mysql-server/defaults/main.yml 
+  877  shutdown -h now
+  878  cd /ansible-roles/ansible-lab/
+  879  ll
+  880  vim zabbix-front-ssl/tasks/main.yml 
+  881  vim /etc/ansible/hosts
+  882  vim playbook.yml 
+  883  ansible-playbook playbook.yml -C
+  884  vim playbook.yml 
+  885  ansible-playbook playbook.yml -C
+  886  ansible-playbook playbook.yml
+  887  cat mysql-server/tasks/main.yml 
+  888  vim mysql-server/tasks/main.yml 
+  889  vim playbook.yml 
+  890  vim /etc/ansible/hosts
+  891  ansible-playbook playbook.yml -C
+  892  ansible-playbook playbook.yml
+  893  vim mysql-server/tasks/main.yml 
+  894  ansible-playbook playbook.yml
+  895  exit
+  896  ip a
+  897  cat /etc/hosts 
+  898  ssh root@192.168.1.21
+  899  ssh root@192.168.1.20
+  900  ssh root@192.168.1.27
+  901  ssh root@192.168.1.25
+  902  ssh root@192.168.1.50
+  903  ssh root@192.168.1.23
+  904  ssh root@192.168.1.21
+  905  ssh root@192.168.1.20
+  906  ssh root@192.168.1.23
+  907  cat /etc/hosts 
+  908  ssh root@192.168.1.21
+  909  ssh root@192.168.1.20
+  910  ping 192.168.1.21
+  911  ssh root@192.168.1.20
+  912  ssh root@192.168.1.21
+  913  cat /etc/hosts 
+  914  ssh root@192.168.1.21
+  915  ssh root@192.168.1.20
+  916  ssh root@192.168.1.21
+  917  ssh root@192.168.1.23
+  918  shutdown -h now
+  919  cd /ansible-roles/ansible-lab/
+  920  vim playbook.yml 
+  921  vim mysql-server/tasks/main.yml 
+  922  ansible-playbook playbook.yml -C
+  923  ansible-playbook playbook.yml
+  924  vim mysql-server/tasks/main.yml 
+  925  ansible-playbook playbook.yml
+  926  pwd
+  927  cd /ansible-roles/ansible-lab/
+  928  ansible-playbook playbook.yml
+  929  vim mysql-server/tasks/main.yml 
+  930  vim mysql-server/defaults/main.yml 
+  931  ansible-playbook playbook.yml
+  932  exit
+  933  shutdown -h now
+  934  cd /ansible-roles/ansible-lab/
+  935  cat playbook.yml 
+  936  shutdown -h now
+  937  cd /ansible-roles/ansible-lab/
+  938  vim mysql-server/defaults/main.yml 
+  939  vim mysql-server/tasks/main.yml 
+  940  ansible-playbook playbook.yml -C
+  941  ansible-playbook playbook.yml 
+  942  vim mysql-server/tasks/main.yml 
+  943  ansible-playbook playbook.yml 
+  944  vim mysql-server/tasks/main.yml 
+  945  ansible-playbook playbook.yml 
+  946  exit
+  947  shutdown -h now
+  948  exit
+  949  shutdown -h now
+  950  cd /ansible-roles/ansible-lab/
+  951  exit
+  952  cd /ansible-roles/ansible-lab/
+  953  ll
+  954  vim grafana-server/tasks/main.yml 
+  955  vim playbook.yml 
+  956  vim /etc/ansible/hosts
+  957  ansible-playbook playbook.yml -C
+  958  ansible-playbook playbook.yml 
+  959  vim grafana-server/tasks/main.yml 
+  960  ansible-playbook playbook.yml 
+  961  vim grafana-server/tasks/main.yml 
+  962  ansible-playbook playbook.yml 
+  963  vim zabbix-front/t
+  964  cp zabbix-front/templates/zabbix.conf.php zabbix-front/files/
+  965  mv zabbix-front/templates/zabbix.conf.php zabbix-front/files/
+  966  cd zabbix-front/files/
+  967  pwd
+  968  cd ..
+  969  ll
+  970  cd ..
+  971  ll
+  972  vim zabbix-front/tasks/main.yml 
+  973  vim playbook.yml 
+  974  vim /etc/hosts 
+  975  cp zabbix-front/files/zabbix.conf.php zabbix-front-ssl/files/
+  976  vim zabbix-front-ssl/tasks/main.yml 
+  977  vim playbook.yml 
+  978  vim /etc/ansible/hosts
+  979  ansible-playbook playbook.yml -C
+  980  ll
+  981  vim update-redhat8/tasks/main.yml 
+  982  vim playbook.yml 
+  983  ansible-playbook playbook.yml -C
+  984  ssh-copy-id root@zbx-frt.connect.local
+  985  vim /root/.ssh/known_hosts 
+  986  ssh-copy-id root@zbx-frt.connect.local
+  987  ansible-playbook playbook.yml -C
+  988  ansible-playbook playbook.yml
+  989  cd /ansible-roles/ansible-lab/
+  990  ansible-playbook playbook.yml
+  991  vim playbook.yml 
+  992  ansible-playbook playbook.yml
+  993  vim playbook.yml 
+  994  ansible-playbook playbook.yml
+  995  shutdown -h now
+  996  cd /ansible-roles/ansible-lab/
+  997  ansible-playbook playbook.yml -C
+  998  vim playbook.yml 
+  999  ansible-playbook playbook.yml
+ 1000  shutdown -h now
+ 1001  cd /ansible-roles/ansible-lab/
+ 1002  history 
+ 1003  history > history.txt

@@ -1,0 +1,18 @@
+---
+# defaults file for zabbix-server
+zabbix_release: "6.0"
+zabbix_version: "6.0-2"
+zabbix_packages: 
+  - zabbix-server-mysql
+
+mysql_zbx_mdb:	"zbxsrvmdb"
+mysql_host:	"zbx-mdb.connect.local"
+mysql_root_pass: "123@Mudar"
+mysql_root_user: "root"
+mysql_zbx_pass: "123@Mudar"
+mysql_zbx_user: "zbxusr"
+
+zbx_srv_addr_03: "zbx-srv-03.connect.local"
+zbx_srv_port: "10051"
+zbx_loc_addr: "Zabbix Server"
+time_out: 30

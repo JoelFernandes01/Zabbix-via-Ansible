@@ -1,0 +1,12 @@
+---
+# defaults file for role-postgresql
+#
+
+
+db_name: zabbix
+db_user: zabbix
+db_password: zabbix
+postgres_root_user: root
+postgres_root_pass: root
+
+

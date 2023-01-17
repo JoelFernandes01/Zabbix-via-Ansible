@@ -1,0 +1,123 @@
+---
+# Tasks file for mysql-server
+# Configurando o Firewalld
+#- name: Iniciando e habilitando o Firewalld
+#  service:
+#    name: firewalld
+#    state: started
+#    enabled: true
+
+#- name: Configurando as regras do Firewall
+#  firewalld:
+#    zone: public
+#    service: "{{ item }}"
+#    permanent: yes
+#    state: enabled
+#  loop:
+#    - mysql
+
+#- name: Restart o serviço Firewalld
+#  service:
+#    name: firewalld
+#    state: restarted
+
+- name: Instalando o MySQL Server 8.0
+  dnf:
+    name: "{{ mysql_packages }}"
+    state: present
+
+- name: Iniciar e habilitar o MySQL Server 8.0
+  service:
+    name: mysqld
+    state: started
+    enabled: true 
+
+- name: Install Zabbix Repository CentOS
+  yum: 
+    name: https://repo.zabbix.com/zabbix/{{ zabbix_release }}/rhel/{{ ansible_distribution_major_version }}/{{ ansible_architecture }}/zabbix-release-{{ zabbix_version }}.el{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
+    disable_gpg_check: yes
+
+
+- name: Instalando os pacotes Zabbix
+  dnf:
+    name: "{{ zabbix_packages }}"
+    state: present
+
+- name: Set root password localhost
+  mysql_user:
+    name: "{{ mysql_root_user }}"
+    host: localhost
+    password: "{{ mysql_root_pass }}"
+    state: present
+    check_implicit_admin: yes
+    login_user: "{{ mysql_root_user }}"
+    login_host: localhost
+    login_password: "{{ mysql_root_pass }}"
+
+- name: Criar o banco
+  mysql_db:
+    login_host: localhost
+    login_password: "{{ mysql_root_pass }}"
+    login_user: "{{ mysql_root_user }}"
+    name: "{{  mysql_zbx_mdb}}"
+    encoding: utf8mb4
+    collation: utf8mb4_bin
+  register: db_created
+
+- name: Criando os usuários nos domínios
+  mysql_user:
+    login_host: localhost
+    login_password: "{{ mysql_root_pass }}"
+    login_user: "{{ mysql_root_user }}"
+    name: "{{ mysql_zbx_user }}"
+    password: "{{ mysql_zbx_pass }}"
+##     priv: "*.*:ALL,GRANT" 
+    priv: "{{  mysql_zbx_mdb}}.*:ALL" 
+    state: present
+    host: "{{ item }}"
+  with_items:
+    - "{{ zbx_srv_addr_01 }}"
+    - "{{ zbx_srv_addr_02 }}"
+    - "{{ zbx_srv_addr_03 }}"
+    - "{{ zbx_frt_addr }}"
+    - "{{ mysql_host }}"
+
+#### Comando para verificar os usuários criados
+####  SELECT CONCAT(QUOTE(user),'@',QUOTE(host)) UserAccount FROM mysql.user;
+####
+
+
+- name: Envio do arquivo zbxsrvmdb.sql
+  copy:
+    src: /ansible-roles/zabbix-environment/conf-files/zbxsrvmdb.Sunday-31-07-2022.sql
+    dest: /usr/share/zabbix-sql-scripts/mysql/zbxsrvmdb.Sunday-31-07-2022.sql
+
+- name: Verificar se o arquivo existe
+  stat:
+    path: /usr/share/zabbix-sql-scripts/mysql/zbxsrvmdb.Sunday-31-07-2022.sql 
+  register: create_sql_gz_exist
+
+#- name: Descompactando Arquivos create.sql.gz
+#  command: gunzip /usr/share/doc/zabbix-sql-scripts/mysql/zbxsrvmdb.sql.gz
+#  when: create_sql_gz_exist.stat.exists
+
+- name: Importando tabelas para o banco de dados do Zabbix
+  mysql_db:
+    state: import
+    login_host: localhost
+    login_password: "{{ mysql_root_pass }}"
+    login_user: "{{ mysql_root_user }}"
+    name: "{{ mysql_zbx_mdb }}"
+    collation: utf8_bin
+    encoding: utf8
+    target: /usr/share/zabbix-sql-scripts/mysql/zbxsrvmdb.Sunday-31-07-2022.sql
+  when: db_created.changed
+
+- name: Voltando backup do Banco
+  shell:
+    cmd: mysql -uroot -p123@Mudar zbxsrvmdb < /usr/share/zabbix-sql-scripts/mysql/zbxsrvmdb.Sunday-31-07-2022.sql
+#    cmd: mysql -uroot -p123@Mudar zbxsrvmdb < /usr/share/doc/zabbix-sql-scripts/mysql/Full.zbxsrvmdb.Tuesday-02-08-22-13h-10m.sql
+#    cmd: mysql -uroot -p123@Mudar zbxsrvmdb < /usr/share/doc/zabbix-sql-scripts/mysql/server.sql
+
+...
